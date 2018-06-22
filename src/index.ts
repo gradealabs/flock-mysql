@@ -51,11 +51,11 @@ export class DataAccessProvider implements Flock.DataAccessProvider {
     }).then(async (client) => {
       if (this.acquireLock) {
         const advisoryLockResult = await new Promise((resolve, reject) => {
-          client.query(`SELECT GET_LOCK('${lock}', 2000)`, (error, result) => {
+          client.query(`SELECT GET_LOCK('${lock}', 2000) as locked`, (error, result) => {
             error ? reject(error) : resolve(result)
           })
         })
-        locked = advisoryLockResult[0][`GET_LOCK('${lock}', 2000)`] === 1
+        locked = advisoryLockResult[0].locked === 1
 
         if (!locked) {
           await new Promise((resolve, reject) => {
