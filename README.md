@@ -40,8 +40,8 @@ method signature is identical to that of the [pg](https://npmjs.org/pg)'s [Clien
 Example:
 ```js
 exports.up = queryInterface => {
-  const sql = 'QUERY'
-  const values = [ 1, 2 ]
+  const sql = 'SELECT * FROM user WHERE age = ?'
+  const values = [ 1 ]
   return queryInterface.query({ sql, values })
 }
 ```
