@@ -1,4 +1,4 @@
-import * as MySql from 'mysql2';
+import * as MySql from 'mysql';
 import * as Flock from '@gradealabs/flock';
 export declare class TemplateProvider implements Flock.TemplateProvider {
     readonly migrationTypes: string[];
@@ -29,7 +29,7 @@ export declare class MySqlDataAccess implements Flock.DataAccess {
     }[]>;
     migrate(migrationId: string, action: (qi: Flock.QueryInterface) => Promise<void>): Promise<void>;
     rollback(migrationId: string, action: (qi: Flock.QueryInterface) => Promise<void>): Promise<void>;
-    close(): Promise<any>;
+    close(): Promise<void>;
     private hasMigrated;
 }
 export declare class MySqlQueryInterface implements Flock.QueryInterface {

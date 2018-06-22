@@ -28,7 +28,6 @@
     "typescript": "2.9.2"
   },
   "dependencies": {
-    "mysql": "2.15.0",
-    "mysql2": "1.5.3"
+    "mysql": "2.15.0"
   }
 }

@@ -1,5 +1,5 @@
 import * as Path from 'path'
-import * as MySql from 'mysql2'
+import * as MySql from 'mysql'
 import * as Flock from '@gradealabs/flock'
 
 export class TemplateProvider implements Flock.TemplateProvider {
