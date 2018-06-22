@@ -32,6 +32,31 @@ exports.templateProvider = new TemplateProvider()
 
 ```
 
+## Migrations
+
+When writing migrations that use `flock-mysql` then the `QueryInterface#query`
+method signature is identical to that of the [pg](https://npmjs.org/pg)'s [Client#query](https://node-postgres.com/features/queries) method.
+
+Example:
+```js
+exports.up = queryInterface => {
+  const sql = 'QUERY'
+  const values = [ 1, 2 ]
+  return queryInterface.query({ sql, values })
+}
+```
+
+The `QueryInterface#query` method accepts a query object with the following
+shape:
+
+```ts
+{
+  sql: string,
+  values?: any[],
+  timeout?: number
+}
+```
+
 ## API
 
 Flock mysql exports implementations of Flock's `DataAccessProvider` and `TemplateProvider`
