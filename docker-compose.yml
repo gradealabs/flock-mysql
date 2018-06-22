@@ -1,0 +1,17 @@
+version: '3.4'
+services:
+  mysql:
+    # https://hub.docker.com/_/mysql/
+    # NOTE (dschnare): It's important that we use mysql version 5.7.x because
+    # the mysql Nodejs client does not support connecting to MySQL 8.x (i.e. the latest).
+    # See: https://github.com/mysqljs/mysql/issues/2002
+    image: mysql:5
+    restart: always
+    ports:
+      # HOST:CONTAINER
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: passWORD!
+      MYSQL_USER: mysqluser
+      MYSQL_PASSWORD: passWORD!
+      MYSQL_DATABASE: mysql
