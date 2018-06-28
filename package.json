@@ -1,6 +1,6 @@
 {
   "name": "@gradealabs/flock-mysql",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Flock plugin for MySQL",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -14,7 +14,7 @@
     "clean": "make clean"
   },
   "keywords": [],
-  "author": "Darren Schnare <dschnare.d@gradealabs.com>",
+  "author": "Darren Schnare <dschnare@gradealabs.com>",
   "license": "MIT",
   "devDependencies": {
     "@gradealabs/flock": "github:gradealabs/flock#3.0.0",
@@ -24,7 +24,6 @@
     "dotenv": "6.0.0",
     "mocha": "5.2.0",
     "ts-node": "6.1.1",
-    "tsconfig-paths": "3.4.0",
     "typescript": "2.9.2"
   },
   "dependencies": {
