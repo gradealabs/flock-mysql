@@ -1,3 +1,10 @@
+# 0.0.5
+
+**Minor**
+
+- Resolve issue with rolling back without first migrating (i.e. the migration
+  table did not yet exist).
+
 # 0.0.4
 
 **Minor**

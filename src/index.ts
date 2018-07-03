@@ -84,6 +84,12 @@ export class MySqlDataAccess implements Flock.DataAccess {
   }
 
   async getMigratedMigrations () {
+    const migrationTableExists = await this.qi.tableExists(this.migrationTableName)
+
+    if (!migrationTableExists) {
+      return []
+    }
+
     const result = await this.qi.query({
       sql: `SELECT id, created_at FROM \`${this.migrationTableName}\``
     })
