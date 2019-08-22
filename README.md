@@ -5,15 +5,15 @@ Flock MySQL is a Flock plugin for MySQL.
 ## Install
 
 ```
-npm install gradealabs/flock-mysql
+npm install launchfort/flock-mysql
 ```
 
 ## Usage
 
 ```js
 // .flockrc.js
-const { DefaultMigrator, NodeModuleMigrationProvider } = require('@gradealabs/flock')
-const { DataAccessProvider, TemplateProvider } = require('@gradealabs/flock-mysql')
+const { DefaultMigrator, NodeModuleMigrationProvider } = require('@launchfort/flock')
+const { DataAccessProvider, TemplateProvider } = require('@launchfort/flock-mysql')
 
 const migrationDir = 'migrations'
 const migrationTableName = 'migration'
