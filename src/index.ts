@@ -1,6 +1,6 @@
 import * as Path from 'path'
 import * as MySql from 'mysql'
-import * as Flock from '@gradealabs/flock'
+import * as Flock from '@launchfort/flock'
 
 export class TemplateProvider implements Flock.TemplateProvider {
   readonly migrationTypes = [ 'create-table', 'alter-table', 'other' ]

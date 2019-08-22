@@ -1,5 +1,5 @@
 import * as MySql from 'mysql';
-import * as Flock from '@gradealabs/flock';
+import * as Flock from '@launchfort/flock';
 export declare class TemplateProvider implements Flock.TemplateProvider {
     readonly migrationTypes: string[];
     provideFileName(migrationType: string): Promise<string>;
